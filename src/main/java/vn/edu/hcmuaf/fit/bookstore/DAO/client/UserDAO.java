@@ -22,7 +22,7 @@ public class UserDAO {
                         rs.getInt("user_id"),
                         rs.getString("username"),
                         rs.getString("password"),
-                        Users.Role.valueOf(rs.getString("role"))
+                        Users.Role.valueOf(rs.getString("role").toUpperCase())
                 );
             }
         } catch (SQLException e) {
