@@ -43,7 +43,7 @@
     </form>
 
     <div class="sign-up-link">
-        Chưa có tài khoản? <a href="sign_up.jsp"> Đăng ký ngay </a>
+        Chưa có tài khoản? <a href="sign_up"> Đăng ký ngay </a>
     </div>
 </body>
 </html>

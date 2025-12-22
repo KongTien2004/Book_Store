@@ -39,7 +39,7 @@
     </form>
 
     <div class="sign-in-link">
-        Bạn đã có tài khoản? <a href="sign_in.jsp"> Đăng nhập </a>
+        Bạn đã có tài khoản? <a href="sign_in"> Đăng nhập </a>
     </div>
 </body>
 </html>
