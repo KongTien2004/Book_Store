@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+form {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 420px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input-group input::placeholder {
+    color: #999;
+}
+
+/* Styling đặc biệt cho input confirm password */
+.input-group:last-of-type {
+    margin-bottom: 25px;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.sign-in-link {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    font-size: 15px;
+}
+
+.sign-in-link a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+.sign-in-link a:hover {
+    opacity: 0.8;
+}
+
+/* Password strength indicator (bonus - nếu muốn thêm sau) */
+.password-strength {
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+}
+
+.password-strength.weak {
+    width: 33%;
+    background-color: #ff4757;
+}
+
+.password-strength.medium {
+    width: 66%;
+    background-color: #ffa502;
+}
+
+.password-strength.strong {
+    width: 100%;
+    background-color: #26de81;
+}
+
+/* Error and Success messages */
+.error-message {
+    background-color: #fee;
+    color: #c33;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border-left: 4px solid #c33;
+}
+
+.success-message {
+    background-color: #efe;
+    color: #3c3;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border-left: 4px solid #3c3;
+}
+
+/* Validation hint text */
+.hint-text {
+    font-size: 13px;
+    color: #666;
+    margin-top: 6px;
+    display: none;
+}
+
+.input-group input:focus + .hint-text {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    form {
+        padding: 30px 25px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .input-group input {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
