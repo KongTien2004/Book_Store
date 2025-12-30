@@ -1,0 +1,140 @@
+/* Footer Styles */
+.footer {
+    background: #f8f9fa;
+    margin-top: 50px;
+}
+
+.footer-top {
+    padding: 50px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-col h6 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0d6efd;
+    display: inline-block;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li {
+    margin-bottom: 12px;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-list a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-list a:hover {
+    color: #0d6efd;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+    margin-top: 15px;
+}
+
+.newsletter-input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-input-group input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.newsletter-input-group input:focus {
+    border-color: #0d6efd;
+}
+
+.newsletter-btn {
+    padding: 12px 30px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.newsletter-btn:hover {
+    background: #0b5ed7;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background: #e9ecef;
+    padding: 25px 0;
+    text-align: center;
+    border-top: 1px solid #dee2e6;
+}
+
+.footer-bottom-content {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-bottom-content strong {
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-row {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-top {
+        padding: 30px 0;
+    }
+
+    .newsletter-input-group {
+        flex-direction: column;
+    }
+
+    .newsletter-btn {
+        width: 100%;
+    }
+
+    .footer-bottom-content {
+        font-size: 13px;
+    }
+}
