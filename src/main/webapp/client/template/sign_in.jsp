@@ -28,7 +28,7 @@
         <% } %>
 
         <div class="input-group">
-            <input type="text" name="username" placeholder="Tên đăng nhập" required>
+            <input type="text" name="username" placeholder="Tên đăng nhập hoặc Email" required>
         </div>
         <div class="input-group">
             <input type="password" name="password" placeholder="Mật khẩu" required>
