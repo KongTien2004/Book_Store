@@ -10,8 +10,12 @@ public class UserService {
         return userDAO.checkUsername(username);
     }
 
-    public Users checkLogin(String username, String password) {
-        return userDAO.checkLogin(username, password);
+    public Users checkLogin(String usernameOrEmail, String password) {
+        return userDAO.checkLogin(usernameOrEmail, password);
+    }
+
+    public Users checkEmail(String email) {
+        return userDAO.checkEmail(email);
     }
 
     public boolean registerUser(Users user) {

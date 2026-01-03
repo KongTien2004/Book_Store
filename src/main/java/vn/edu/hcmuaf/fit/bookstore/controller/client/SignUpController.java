@@ -23,6 +23,7 @@ public class SignUpController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Lấy dữ liệu từ form
         String username = request.getParameter("username");
+        String email = request.getParameter("email");
         String password = request.getParameter("password");
         String confirmPassword = request.getParameter("confirm-password");
 
@@ -37,11 +38,22 @@ public class SignUpController extends HttpServlet {
 
         // Trim dữ liệu
         username = username.trim();
+        email = email.trim();
 
         // Kiểm tra username có ít nhất 3 ký tự
         if (username.length() < 3) {
             request.setAttribute("error", "Tên đăng nhập phải có ít nhất 3 ký tự!");
             request.setAttribute("username", username);
+            request.setAttribute("email", email);
+            request.getRequestDispatcher("/client/template/sign_up.jsp").forward(request, response);
+            return;
+        }
+
+        // Kiểm tra định dạng email
+        if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\\\.[A-Za-z]{2,}$")) {
+            request.setAttribute("error", "Email không hợp lệ!");
+            request.setAttribute("username", username);
+            request.setAttribute("email", email);
             request.getRequestDispatcher("/client/template/sign_up.jsp").forward(request, response);
             return;
         }
@@ -50,6 +62,7 @@ public class SignUpController extends HttpServlet {
         if (password.length() < 6) {
             request.setAttribute("error", "Mật khẩu phải có ít nhất 6 ký tự!");
             request.setAttribute("username", username);
+            request.setAttribute("email", email);
             request.getRequestDispatcher("/client/template/sign_up.jsp").forward(request, response);
             return;
         }
@@ -58,6 +71,7 @@ public class SignUpController extends HttpServlet {
         if (!password.equals(confirmPassword)) {
             request.setAttribute("error", "Mật khẩu xác nhận không khớp!");
             request.setAttribute("username", username);
+            request.setAttribute("email", email);
             request.getRequestDispatcher("/client/template/sign_up.jsp").forward(request, response);
             return;
         }
@@ -67,12 +81,22 @@ public class SignUpController extends HttpServlet {
         if (existingUser != null) {
             request.setAttribute("error", "Tên đăng nhập đã tồn tại!");
             request.setAttribute("username", username);
+            request.setAttribute("email", email);
+            request.getRequestDispatcher("/client/template/sign_up.jsp").forward(request, response);
+            return;
+        }
+
+        Users existingEmail = userService.checkEmail(email);
+        if (existingEmail != null) {
+            request.setAttribute("error", "Email đã được sử dụng!");
+            request.setAttribute("username", username);
+            request.setAttribute("email", email);
             request.getRequestDispatcher("/client/template/sign_up.jsp").forward(request, response);
             return;
         }
 
         // Tạo user mới với role CLIENT
-        Users newUser = new Users(username, password, Users.Role.CLIENT);
+        Users newUser = new Users(username, email, password, Users.Role.CLIENT);
 
         // Đăng ký user
         boolean isRegistered = userService.registerUser(newUser);
@@ -85,6 +109,7 @@ public class SignUpController extends HttpServlet {
             // Đăng ký thất bại
             request.setAttribute("error", "Đăng ký thất bại! Vui lòng thử lại.");
             request.setAttribute("username", username);
+            request.setAttribute("email", email);
             request.getRequestDispatcher("/client/template/sign_up.jsp").forward(request, response);
         }
     }

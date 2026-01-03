@@ -7,20 +7,23 @@ public class Users implements Serializable {
 
     private int userId;
     private String userName;
+    private String email;
     private String password;
     private Role role;
 
     public Users() {}
 
-    public Users(int userId, String userName, String password, Role role) {
+    public Users(int userId, String userName, String email, String password, Role role) {
         this.userId = userId;
         this.userName = userName;
+        this.email = email;
         this.password = password;
         this.role = role;
     }
 
-    public Users(String userName, String password, Role role) {
+    public Users(String userName, String email, String password, Role role) {
         this.userName = userName;
+        this.email = email;
         this.password = password;
         this.role = role;
     }
@@ -32,6 +35,10 @@ public class Users implements Serializable {
 
     public String getUserName() {
         return userName;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     public String getPassword() {
@@ -49,6 +56,10 @@ public class Users implements Serializable {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setPassword(String password) {
