@@ -22,17 +22,17 @@ public class SignInController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("username");
+        String usernameOrEmail = request.getParameter("username");
         String password = request.getParameter("password");
 
-        if (username == null || username.trim().isEmpty() ||
+        if (usernameOrEmail == null || usernameOrEmail.trim().isEmpty() ||
                 password == null || password.trim().isEmpty()) {
             request.setAttribute("error", "Vui lòng nhập đầy đủ thông tin!");
             request.getRequestDispatcher("/client/template/sign_in.jsp").forward(request, response);
             return;
         }
 
-        Users user = userService.checkLogin(username.trim(), password);
+        Users user = userService.checkLogin(usernameOrEmail.trim(), password);
 
         if (user != null) { //Đăng nhập thành công -> chuyển qua trang Home
             HttpSession session = request.getSession();
@@ -43,9 +43,9 @@ public class SignInController extends HttpServlet {
 
             //Nếu tài khoản là ADMIN -> chuyển qua trang dashboard của ADMIN
             if (user.getRole() == Users.Role.ADMIN) {
-                response.sendRedirect(request.getContextPath() + "/admin/template/dashboard.jsp");
+                response.sendRedirect(request.getContextPath() + "/dashboard");
             } else {
-                response.sendRedirect(request.getContextPath() + "/client/template/home.jsp");
+                response.sendRedirect(request.getContextPath() + "/home");
             }
         } else { //Đăng nhập thất bại -> Yêu cầu người dùng đăng nhập lại
             request.setAttribute("error", "Tên đăng nhập hoặc mật khẩu không đúng.");
