@@ -5,6 +5,7 @@ import vn.edu.hcmuaf.fit.bookstore.model.ForgetPasswordTokens;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ForgotPasswordDAO {
@@ -24,5 +25,42 @@ public class ForgotPasswordDAO {
         }
 
         return false;
+    }
+
+    public void updateTokenStatus(ForgetPasswordTokens token) {
+        String query = "UPDATE forget_password_tokens SET is_used = ? WHERE token = ?";
+
+        try (Connection connection = DBConnect.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setBoolean(1, token.isUsed());
+            statement.setString(2, token.getToken());
+
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public ForgetPasswordTokens getToken(String token) {
+        String query = "SELECT * FROM forget_password_tokens WHERE token = ?";
+
+        try (Connection connection = DBConnect.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setString(1, token);
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()) {
+                return new ForgetPasswordTokens(
+                    rs.getInt("token_id"),
+                    rs.getInt("user_id"),
+                    rs.getString("token"),
+                    rs.getTimestamp("expiry_time").toLocalDateTime(),
+                    rs.getBoolean("is_used")
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 }
