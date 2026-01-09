@@ -17,6 +17,14 @@
     <form action="forgot_password" method="post">
         <h1>Quên mật khẩu</h1>
 
+        <% if (request.getAttribute("error") != null) { %>
+            <div class="error-message"><%= request.getAttribute("error") %></div>
+        <% } %>
+
+        <% if (request.getAttribute("success") != null) { %>
+            <div class="success-message"><%= request.getAttribute("success") %></div>
+        <% } %>
+
         <div class="input-group">
             <input type="email" name="email" placeholder="Email khôi phục">
         </div>
