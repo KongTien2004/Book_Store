@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 
 public class ForgetPasswordTokens implements Serializable {
     private int tokenId;
-    private int user_id;
+    private int userId;
     private String token;
     private LocalDateTime expiryTime;
     private boolean isUsed;
@@ -13,16 +13,16 @@ public class ForgetPasswordTokens implements Serializable {
     public ForgetPasswordTokens() {
     }
 
-    public ForgetPasswordTokens(int tokenId, int user_id, String token, LocalDateTime expiryTime, boolean isUsed) {
+    public ForgetPasswordTokens(int tokenId, int userId, String token, LocalDateTime expiryTime, boolean isUsed) {
         this.tokenId = tokenId;
-        this.user_id = user_id;
+        this.userId = userId;
         this.token = token;
         this.expiryTime = expiryTime;
         this.isUsed = isUsed;
     }
 
-    public ForgetPasswordTokens(int user_id, String token, LocalDateTime expiryTime, boolean isUsed) {
-        this.user_id = user_id;
+    public ForgetPasswordTokens(int userId, String token, LocalDateTime expiryTime, boolean isUsed) {
+        this.userId = userId;
         this.token = token;
         this.expiryTime = expiryTime;
         this.isUsed = isUsed;
@@ -33,8 +33,8 @@ public class ForgetPasswordTokens implements Serializable {
         return tokenId;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public int getUserId() {
+        return userId;
     }
 
     public String getToken() {
@@ -54,8 +54,8 @@ public class ForgetPasswordTokens implements Serializable {
         this.tokenId = tokenId;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public void setToken(String token) {
