@@ -43,7 +43,7 @@ public class ResetPasswordService {
             }
         };
 
-        Session session = Session.getInstance(props);
+        Session session = Session.getInstance(props, auth);
         MimeMessage msg = new MimeMessage(session);
 
         try {
