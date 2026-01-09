@@ -25,7 +25,7 @@
             <input type="password" name="confirm-new-password" placeholder="Xác nhận lại mật khẩu mới">
         </div>
 
-        <button type="submit" class="btn">Lưu</button>
+        <button type="submit" class="btn">Xác nhận</button>
     </form>
 </body>
 </html>
