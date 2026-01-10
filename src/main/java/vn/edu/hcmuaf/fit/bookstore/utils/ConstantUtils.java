@@ -1,4 +1,4 @@
-package com.bookshopweb.utils;
+package vn.edu.hcmuaf.fit.bookstore.utils;
 
 public interface ConstantUtils {
     int DB_PORT = 3306;

@@ -1,4 +1,4 @@
-package com.bookshopweb.utils;
+package vn.edu.hcmuaf.fit.bookstore.utils;
 
 import java.util.ArrayList;
 import java.util.List;

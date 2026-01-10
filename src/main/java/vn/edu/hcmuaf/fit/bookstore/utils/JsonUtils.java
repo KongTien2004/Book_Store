@@ -1,10 +1,10 @@
-package com.bookshopweb.utils;
+package vn.edu.hcmuaf.fit.bookstore.utils;
 
 import com.google.gson.Gson;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 

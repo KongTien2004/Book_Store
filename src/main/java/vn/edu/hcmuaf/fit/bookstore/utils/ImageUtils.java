@@ -1,9 +1,9 @@
-package com.bookshopweb.utils;
+package vn.edu.hcmuaf.fit.bookstore.utils;
 
 import org.jetbrains.annotations.NotNull;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.Part;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.Part;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
