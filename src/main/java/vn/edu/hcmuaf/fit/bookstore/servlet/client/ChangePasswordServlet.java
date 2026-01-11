@@ -1,14 +1,14 @@
 package vn.edu.hcmuaf.fit.bookstore.servlet.client;
 
-import com.bookshopweb.beans.User;
-import com.bookshopweb.service.UserService;
-import com.bookshopweb.utils.HashingUtils;
+import vn.edu.hcmuaf.fit.bookstore.beans.User;
+import vn.edu.hcmuaf.fit.bookstore.service.UserService;
+import vn.edu.hcmuaf.fit.bookstore.utils.HashingUtils;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -21,7 +21,7 @@ public class ChangePasswordServlet extends HomeServlet {
         request.getRequestDispatcher("WEB-INF/views/changePasswordView.jsp").forward(request, response);
     }
 
-    @Override
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Map<String, String> values = new HashMap<>();
         values.put("currentPassword", request.getParameter("currentPassword"));

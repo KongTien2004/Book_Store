@@ -1,21 +1,21 @@
 package vn.edu.hcmuaf.fit.bookstore.servlet.client;
 
-import com.bookshopweb.beans.Category;
-import com.bookshopweb.beans.Product;
-import com.bookshopweb.beans.ProductReview;
-import com.bookshopweb.beans.User;
-import com.bookshopweb.service.CategoryService;
-import com.bookshopweb.service.ProductReviewService;
-import com.bookshopweb.service.ProductService;
-import com.bookshopweb.service.WishlistItemService;
-import com.bookshopweb.utils.Protector;
-import com.bookshopweb.utils.TextUtils;
+import vn.edu.hcmuaf.fit.bookstore.beans.Category;
+import vn.edu.hcmuaf.fit.bookstore.beans.Product;
+import vn.edu.hcmuaf.fit.bookstore.beans.ProductReview;
+import vn.edu.hcmuaf.fit.bookstore.beans.User;
+import vn.edu.hcmuaf.fit.bookstore.service.CategoryService;
+import vn.edu.hcmuaf.fit.bookstore.service.ProductReviewService;
+import vn.edu.hcmuaf.fit.bookstore.service.ProductService;
+import vn.edu.hcmuaf.fit.bookstore.service.WishlistItemService;
+import vn.edu.hcmuaf.fit.bookstore.utils.Protector;
+import vn.edu.hcmuaf.fit.bookstore.utils.TextUtils;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

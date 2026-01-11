@@ -1,15 +1,15 @@
-package com.bookshopweb.servlet.client.productreview;
+package vn.edu.hcmuaf.fit.bookstore.servlet.client.productreview;
 
-import com.bookshopweb.beans.ProductReview;
-import com.bookshopweb.service.ProductReviewService;
-import com.bookshopweb.utils.Protector;
-import com.bookshopweb.utils.Validator;
+import vn.edu.hcmuaf.fit.bookstore.beans.ProductReview;
+import vn.edu.hcmuaf.fit.bookstore.service.ProductReviewService;
+import vn.edu.hcmuaf.fit.bookstore.utils.Protector;
+import vn.edu.hcmuaf.fit.bookstore.utils.Validator;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.HashMap;
