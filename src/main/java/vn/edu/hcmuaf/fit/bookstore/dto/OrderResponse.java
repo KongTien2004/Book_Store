@@ -1,4 +1,4 @@
-package com.bookshopweb.dto;
+package vn.edu.hcmuaf.fit.bookstore.dto;
 
 import java.util.StringJoiner;
 
