@@ -1,24 +1,24 @@
-package com.bookshopweb.servlet.admin.order;
+package vn.edu.hcmuaf.fit.bookstore.servlet.admin.order;
 
-import com.bookshopweb.beans.Order;
-import com.bookshopweb.beans.OrderItem;
-import com.bookshopweb.service.OrderItemService;
-import com.bookshopweb.service.OrderService;
-import com.bookshopweb.service.ProductService;
-import com.bookshopweb.service.UserService;
-import com.bookshopweb.utils.Protector;
+import vn.edu.hcmuaf.fit.bookstore.beans.Order;
+import vn.edu.hcmuaf.fit.bookstore.beans.OrderItem;
+import vn.edu.hcmuaf.fit.bookstore.service.OrderItemService;
+import vn.edu.hcmuaf.fit.bookstore.service.OrderService;
+import vn.edu.hcmuaf.fit.bookstore.service.ProductService;
+import vn.edu.hcmuaf.fit.bookstore.service.UserService;
+import vn.edu.hcmuaf.fit.bookstore.utils.Protector;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static com.bookshopweb.servlet.admin.order.OrderManagerServlet.calculateTotalPrice;
+import static vn.edu.hcmuaf.fit.bookstore.servlet.admin.order.OrderManagerServlet.calculateTotalPrice;
 
 @WebServlet(name = "OrderManagerDetailServlet", value = "/admin/orderManager/detail")
 public class OrderManagerDetailServlet extends HttpServlet {

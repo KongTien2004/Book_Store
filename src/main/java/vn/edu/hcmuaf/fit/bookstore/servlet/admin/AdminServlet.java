@@ -1,16 +1,16 @@
-package com.bookshopweb.servlet.admin;
+package vn.edu.hcmuaf.fit.bookstore.servlet.admin;
 
-import com.bookshopweb.service.CategoryService;
-import com.bookshopweb.service.OrderService;
-import com.bookshopweb.service.ProductService;
-import com.bookshopweb.service.UserService;
-import com.bookshopweb.utils.Protector;
+import vn.edu.hcmuaf.fit.bookstore.service.CategoryService;
+import vn.edu.hcmuaf.fit.bookstore.service.OrderService;
+import vn.edu.hcmuaf.fit.bookstore.service.ProductService;
+import vn.edu.hcmuaf.fit.bookstore.service.UserService;
+import vn.edu.hcmuaf.fit.bookstore.utils.Protector;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "AdminServlet", value = "/admin")

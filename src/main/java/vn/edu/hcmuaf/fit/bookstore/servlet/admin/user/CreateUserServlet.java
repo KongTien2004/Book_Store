@@ -1,16 +1,16 @@
-package com.bookshopweb.servlet.admin.user;
+package vn.edu.hcmuaf.fit.bookstore.servlet.admin.user;
 
-import com.bookshopweb.beans.User;
-import com.bookshopweb.service.UserService;
-import com.bookshopweb.utils.HashingUtils;
-import com.bookshopweb.utils.Protector;
-import com.bookshopweb.utils.Validator;
+import vn.edu.hcmuaf.fit.bookstore.beans.User;
+import vn.edu.hcmuaf.fit.bookstore.service.UserService;
+import vn.edu.hcmuaf.fit.bookstore.utils.HashingUtils;
+import vn.edu.hcmuaf.fit.bookstore.utils.Protector;
+import vn.edu.hcmuaf.fit.bookstore.utils.Validator;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
