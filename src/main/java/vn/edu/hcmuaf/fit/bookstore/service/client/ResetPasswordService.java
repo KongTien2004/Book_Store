@@ -15,7 +15,7 @@ import java.util.UUID;
 public class ResetPasswordService {
     private final int LIMIT_EXPIRY_TIME = 15;
     private final String from = "tongduykien6a1@gmail.com";
-    private final String password = "sjyt kajx kqqq pylo";
+    private final String password = "sjytkajxkqqqpylo";
 
     public String generateTokens() {
         return UUID.randomUUID().toString();
@@ -35,6 +35,9 @@ public class ResetPasswordService {
         props.put("mail.smtp.port", "587");
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
+        props.put("mail.smtp.ssl.protocols", "TLSv1.2");
+        props.put("mail.smtp.user", from);
 
         Authenticator auth = new Authenticator() {
             @Override
@@ -47,19 +50,19 @@ public class ResetPasswordService {
         MimeMessage msg = new MimeMessage(session);
 
         try {
-            msg.addHeader("Content-Type", "text/html; charset=utf-8");
-            msg.setFrom(from);
+            msg.addHeader("Content-Type", "text/html; charset=UTF-8");
+            msg.setFrom(new InternetAddress(from, "Book Store"));
             msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email, false));
             msg.setSubject("Cài đặt mật khẩu mới", "UTF-8");
-            String content = "<h1>Xin chào" + name + "</h1>"
-                    + "<p>Hãy nhấp nào link này để cài đặt mật khẩu mới cho tài khoản"
-                    + "<a href=" + link + ">Nhấp đây</a></p>";
-            msg.setContent(content, "text/html; charset=utf-8");
+            String content = "<h1>Xin chào " + name + "</h1>"
+                    + "<p>Hãy click vào link này để cài đặt mật khẩu mới cho tài khoản"
+                    + "<a href='" + link + "'> Click đây</a></p>";
+            msg.setContent(content, "text/html; charset=UTF-8");
             Transport.send(msg);
             System.out.println("Gửi yêu cầu thành công!");
             return true;
         } catch (Exception e) {
-            System.out.println("Hãy nhập đúng email của bạn.");
+            System.out.println("Lỗi gửi email.");
             System.out.println(e);
             return false;
         }
