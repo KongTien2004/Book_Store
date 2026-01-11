@@ -1,15 +1,15 @@
 package vn.edu.hcmuaf.fit.bookstore.filter;
 
-import com.bookshopweb.dto.ErrorMessage;
-import com.bookshopweb.utils.JsonUtils;
+import vn.edu.hcmuaf.fit.bookstore.dto.ErrorMessage;
+import vn.edu.hcmuaf.fit.bookstore.utils.JsonUtils;
 
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.annotation.WebFilter;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.Filter;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
+import jakarta.servlet.annotation.WebFilter;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebFilter(filterName = "ExceptionFilter", value = "/*")
