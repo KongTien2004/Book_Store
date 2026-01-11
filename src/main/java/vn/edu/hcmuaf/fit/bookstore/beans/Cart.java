@@ -1,4 +1,4 @@
-package com.bookshopweb.beans;
+package vn.edu.hcmuaf.fit.bookstore.beans;
 
 import org.jetbrains.annotations.Nullable;
 

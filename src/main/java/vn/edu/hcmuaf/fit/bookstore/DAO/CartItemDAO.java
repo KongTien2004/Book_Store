@@ -1,6 +1,6 @@
-package com.bookshopweb.dao;
+package vn.edu.hcmuaf.fit.bookstore.DAO;
 
-import com.bookshopweb.beans.CartItem;
+import vn.edu.hcmuaf.fit.bookstore.beans.CartItem;
 import org.jdbi.v3.sqlobject.config.RegisterBeanMapper;
 import org.jdbi.v3.sqlobject.customizer.Bind;
 import org.jdbi.v3.sqlobject.customizer.BindBean;

@@ -1,4 +1,4 @@
-package com.bookshopweb.dao;
+package vn.edu.hcmuaf.fit.bookstore.DAO;
 
 import java.util.List;
 import java.util.Optional;

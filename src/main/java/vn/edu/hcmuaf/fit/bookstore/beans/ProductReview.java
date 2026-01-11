@@ -1,4 +1,4 @@
-package com.bookshopweb.beans;
+package vn.edu.hcmuaf.fit.bookstore.beans;
 
 import org.jdbi.v3.core.mapper.Nested;
 import org.jetbrains.annotations.Nullable;
