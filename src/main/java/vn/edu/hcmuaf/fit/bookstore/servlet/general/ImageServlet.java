@@ -1,23 +1,17 @@
-package com.bookshopweb.servlet.general;
+package vn.edu.hcmuaf.fit.bookstore.servlet.general;
 
-import com.bookshopweb.utils.ConstantUtils;
+import vn.edu.hcmuaf.fit.bookstore.utils.ConstantUtils;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.net.URLDecoder;
 import java.nio.file.Files;
 
-/**
- * The Image servlet for serving from absolute path.
- *
- * @author BalusC
- * @link http://balusc.blogspot.com/2007/04/imageservlet.html
- */
 @WebServlet(name = "ImageServlet", value = "/image/*")
 public class ImageServlet extends HttpServlet {
 
