@@ -1,8 +1,8 @@
-package com.bookshopweb.service;
+package vn.edu.hcmuaf.fit.bookstore.service;
 
-import com.bookshopweb.beans.Product;
-import com.bookshopweb.dao.ProductDAO;
-import com.bookshopweb.utils.Protector;
+import vn.edu.hcmuaf.fit.bookstore.beans.Product;
+import vn.edu.hcmuaf.fit.bookstore.DAO.ProductDAO;
+import vn.edu.hcmuaf.fit.bookstore.utils.Protector;
 
 import java.util.List;
 import java.util.stream.Collectors;

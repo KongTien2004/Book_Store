@@ -1,7 +1,7 @@
-package com.bookshopweb.service;
+package vn.edu.hcmuaf.fit.bookstore.service;
 
-import com.bookshopweb.dao.DAO;
-import com.bookshopweb.utils.JdbiUtils;
+import vn.edu.hcmuaf.fit.bookstore.DAO.DAO;
+import vn.edu.hcmuaf.fit.bookstore.utils.JdbiUtils;
 import org.jdbi.v3.core.Jdbi;
 
 import java.util.List;

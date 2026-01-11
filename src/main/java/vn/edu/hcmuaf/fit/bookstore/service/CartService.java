@@ -1,7 +1,7 @@
-package com.bookshopweb.service;
+package vn.edu.hcmuaf.fit.bookstore.service;
 
-import com.bookshopweb.beans.Cart;
-import com.bookshopweb.dao.CartDAO;
+import vn.edu.hcmuaf.fit.bookstore.beans.Cart;
+import vn.edu.hcmuaf.fit.bookstore.DAO.CartDAO;
 
 import java.util.Optional;
 

@@ -1,7 +1,7 @@
-package com.bookshopweb.service;
+package vn.edu.hcmuaf.fit.bookstore.service;
 
-import com.bookshopweb.beans.Category;
-import com.bookshopweb.dao.CategoryDAO;
+import vn.edu.hcmuaf.fit.bookstore.beans.Category;
+import vn.edu.hcmuaf.fit.bookstore.DAO.CategoryDAO;
 
 import java.util.Optional;
 

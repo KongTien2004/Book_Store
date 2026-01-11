@@ -1,7 +1,7 @@
-package com.bookshopweb.service;
+package vn.edu.hcmuaf.fit.bookstore.service;
 
-import com.bookshopweb.beans.ProductReview;
-import com.bookshopweb.dao.ProductReviewDAO;
+import vn.edu.hcmuaf.fit.bookstore.beans.ProductReview;
+import vn.edu.hcmuaf.fit.bookstore.DAO.ProductReviewDAO;
 
 import java.util.List;
 

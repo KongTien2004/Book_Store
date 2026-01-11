@@ -1,7 +1,7 @@
-package com.bookshopweb.service;
+package vn.edu.hcmuaf.fit.bookstore.service;
 
-import com.bookshopweb.beans.WishlistItem;
-import com.bookshopweb.dao.WishlistItemDAO;
+import vn.edu.hcmuaf.fit.bookstore.beans.WishlistItem;
+import vn.edu.hcmuaf.fit.bookstore.DAO.WishlistItemDAO;
 
 import java.util.List;
 
